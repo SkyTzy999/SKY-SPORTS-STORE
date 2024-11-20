@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reavyn Official</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+  <img src="https://files.catbox.moe/uoguuo.jpg" alt="Profile picture" />
+  <div class="info">
+    <h1>
+      Riuze Official 
+      <span class="verified-icon"><i class="fas fa-check-circle"></i></span>
+      
+    </h1>
+    <p>Produk Digital</p>
+    <p>Bekasi, Cikarang</p>
+    <a href="#">Detail Toko</a>
+  </div>
+</div>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee">
+        Promo Terbatas! Diskon hingga 50% untuk Produk Hosting! Sampai Desember 🎉
+      </div>
+    </div>
+    <div class="whatsapp-small">
+      <a href="https://wa.me/628388910861" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Cari Produk di Reavyn Official">
+      <button id="searchButton">Search</button>
+    </div><div class="category">
+    </div>
+        <h3>Produk Digital</h3>
+    <div class="products" id="productList">
+      <div class="product" data-name="Panel Bot Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp500</h3>
+        <p>Panel Wa 1GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp1,000</h3>
+        <p>Panel Wa 2GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp2,000</h3>
+        <p>Panel Wa 3GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp3,000</h3>
+        <p>Panel Wa 4GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp4,000</h3>
+        <p>Panel Wa 5GB</p>
+      </div>
+      <div class="product" data-name="VOS Digital Ocean RAM 1GB">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp5,000</h3>
+        <p>Panel Wa 6GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp6,000</h3>
+        <p>Panel Wa 7GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp7,000</h3>
+        <p>Panel Wa 8GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp8,000</h3>
+        <p>Panel Wa 9GB</p>
+      </div>
+      <div class="product" data-name="Panel Wa">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa">
+        <h3>Rp9,000</h3>
+        <p>Panel Wa 10GB</p>
+      </div>
+      <div class="product" data-name="VOS Digital Ocean RAM 1GB">
+        <img src="https://files.catbox.moe/wiseg9.png" alt="Panel Wa Unlimited">
+        <h3>Rp15,000</h3>
+        <p>Panel Wa Unlimited</p>
+      </div>
+    </div>
+    <div class="products" id="productList">
+      <div class="product" data-name="Script Bot Wa">
+        <img src="https://files.catbox.moe/3qbqd2.jpg" alt="Script Bot Wa">
+        <h3>Rp10.000</h3>
+        <p>SC Neira-MD</p>
+      </div>
+      <div class="product" data-name="Minecraft">
+        <img src="https://files.catbox.moe/ndfzqi.jpg" alt="Minecraft">
+        <h3>Rp15.000</h3>
+        <p>File Server Minecraft Venza Network</p>
+      </div>
+      <div class="product" data-name="Nokos">
+        <img src="https://files.catbox.moe/4bhcn5.jpg" alt="Nokos">
+        <h3>Rp10.000</h3>
+        <p>Nokos Usa (+1) </p>
+      </div>
+      </div>
+      <script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        const name = product.getAttribute('data-name').toLowerCase();
+        if (name.includes(query)) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  </script>
+ </body>
+</div>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    /* Kotak Iklan Mengambang */
+    .floating-ad {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      z-index: 1000;
+      display: none;
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    /* Animasi untuk muncul */
+    @keyframes slideDown {
+      from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+
+    /* Animasi untuk menghilang */
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    /* Konten dalam iklan */
+    .floating-ad img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .floating-ad .content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .floating-ad .content button {
+      padding: 10px 15px;
+      background-color: #00aaff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .floating-ad .content button:hover {
+      background-color: #0088cc;
+    }
+
+    /* Tombol Close */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="footer-logo">
+  <img src="spot.png" alt="Spotify Logo" class="logo">
+  <div class="wave-container">
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+  </div>
+</div>
+
+  <!-- Kotak Iklan Mengambang -->
+  <div class="floating-ad" id="floatingAd">
+    <button class="close-btn" id="closeAd">&times;</button>
+    <img src="https://files.catbox.moe/d8h6ox.jpg" alt="Iklan Promo">
+    <div class="content">
+      <p>Promo Spesial! Diskon hingga 50%</p>
+      <button onclick="window.location.href='#'">Lihat Promo</button>
+    </div>
+  </div>
+
+  <script>
+    // Tampilkan Iklan Setelah Beberapa Detik
+    window.onload = function () {
+      setTimeout(() => {
+        const ad = document.getElementById('floatingAd');
+        ad.style.display = 'block';
+      }, 2000); // Tampil setelah 2 detik
+    };
+
+    // Tombol Tutup Iklan
+    document.getElementById('closeAd').addEventListener('click', function () {
+      const ad = document.getElementById('floatingAd');
+      ad.style.animation = 'fadeOut 0.5s ease-in-out'; // Animasi menghilang
+      ad.addEventListener('animationend', () => {
+        ad.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

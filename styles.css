@@ -1,0 +1,319 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  border-radius: 20%;
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.header .info h1 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.header .info .verified-icon {
+  color: #00aaff;
+  margin-left: 8px;
+  font-size: 20px;
+}
+
+.header .info p {
+  margin: 5px 0;
+  color: #888;
+}
+
+.header .info a {
+  color: #00aaff;
+  text-decoration: none;
+}
+.verified-icon {
+  display: inline-block;
+  color: #00aaff;
+  font-size: 24px;
+  margin-left: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Animasi Pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Membesar */
+  }
+  100% {
+    transform: scale(1); /* Kembali ke ukuran asli */
+  }
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #00aaff;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.whatsapp-small {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+.whatsapp-small a {
+  display: block;
+  width: 80px;
+  height: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.whatsapp-small a:hover {
+  background-color: #1da851;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 10px 10px;
+  border: none;
+  background-color: #00aaff;
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.products::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.products::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.product {
+  flex: 0 0 auto;
+  width: 150px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Kotak Iklan Mengambang */
+    .floating-ad {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      z-index: 1000;
+      display: none;
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    /* Animasi untuk muncul */
+    @keyframes slideDown {
+      from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+
+    /* Animasi untuk menghilang */
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    /* Konten dalam iklan */
+    .floating-ad img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .floating-ad .content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .floating-ad .content button {
+      padding: 10px 15px;
+      background-color: #00aaff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .floating-ad .content button:hover {
+      background-color: #0088cc;
+    }
+
+    /* Tombol Close */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #888;
+    }
+    /* Footer logo container */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5px.;
+  background-color: #1DB954;
+}
+
+/* Spotify logo */
+.logo {
+  height: 50px;
+  margin-right: 10px;
+  animation: fadeIn 2s ease-in-out infinite;
+}
+
+/* Wave animation container */
+.wave-container {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+/* Wave bars */
+.wave {
+  width: 5px;
+  height: 20px;
+  background-color: white;
+  border-radius: 2px;
+  animation: waveAnim 1.2s infinite ease-in-out;
+}
+
+/* Animation for wave bars */
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for wave animation */
+@keyframes waveAnim {
+  0%, 100% {
+    height: 20px;
+  }
+  50% {
+    height: 40px;
+  }
+}
+
+/* Fade-in animation for logo */
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
